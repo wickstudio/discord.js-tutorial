@@ -1,0 +1,15 @@
+{
+  "name": "tutorial-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Wick",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
