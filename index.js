@@ -34,9 +34,9 @@ client.on('messageCreate', message => {
     const args = message.content.slice(1).split(/ +/);
     const commandName = args.shift().toLowerCase();  // يحول اسم الامر الى حروف صغيرة
 
-    const command = client.commands.get(commandName); // يحصل الامر من مجلد الاوامر ويتفاعل معاهم
+    const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.alliases && cmd.alliases.includes(commandName)); // تعريف الاوامر او الاختصارات
 
-    if (!command) return; // تجاهل الرسائل غير الاوامر
+    if (!command) return; // تجاهل الرسائل غير الاوامر 
 
     // معالجة اخطاء الكود
     try {
