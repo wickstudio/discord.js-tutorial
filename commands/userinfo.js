@@ -2,7 +2,7 @@ const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'userinfo',
-    aliases: ['u', 'us'],
+    alliases: ['u', 'us'],
     description: 'عرض معلومات الشخص',
 
     execute(message, args) {
